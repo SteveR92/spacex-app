@@ -1,0 +1,10 @@
+.launchCard {
+  margin: 5%;
+  background: rgb(61, 61, 61);
+  cursor: pointer;
+  width: 20%;
+  height: 150px;
+  padding: 5%;
+  font-size: 2rem;
+  color: white;
+}
