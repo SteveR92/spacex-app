@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "../styles/launch.module.css";
+import styles from "../styles/launch.module.scss";
 export const Launches = (props) => {
   //   console.log("rocket", props.data[0].rocket.second_stage.payloads);
 

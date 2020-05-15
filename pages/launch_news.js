@@ -8,13 +8,14 @@ export default function Launch_News() {
   const { posts } = useSelector((state) => state.post);
 
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(fetchMissions());
   }, []);
 
   setTimeout(() => {
     setLoading(false);
-  }, 3000);
+  }, 4000);
 
   if (isLoading) {
     return <Loading />;
