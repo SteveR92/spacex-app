@@ -1,0 +1,167 @@
+$pink: rgb(250, 106, 171);
+$blue: rgb(115, 201, 238);
+$purple: rgb(102, 250, 255);
+$red: rgb(255, 23, 23);
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.buttonBackground {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+}
+
+.buttonBackground:after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 6px solid $pink;
+  border-color: $pink transparent $pink transparent;
+  animation: lds-dual-ring 6s linear infinite;
+  transition: border 500ms ease-out;
+  transition: animation 500ms ease-out;
+}
+
+.launchButton {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+}
+
+.launchButton:after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 6px solid $blue;
+  border-color: $blue transparent $blue transparent;
+  animation: lds-dual-ring 4s linear infinite;
+  transition: border 500ms ease-out;
+  transition: animation 500ms ease-out;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#launched {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+}
+
+#launched:after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 6px solid $red;
+  border-color: $red transparent $red transparent;
+  transition: border 500ms ease-out;
+  transition: animation 500ms ease-out;
+  animation: flashLaunched 3s linear infinite;
+}
+
+@keyframes flashLaunched {
+  0% {
+    border-color: $red transparent $red transparent;
+    transform: rotate(0deg);
+  }
+  100% {
+    border-color: $purple transparent $purple transparent;
+    transform: rotate(360deg);
+  }
+}
+
+#launchedBackground {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+}
+
+#launchedBackground:after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 6px solid $purple;
+  border-color: $purple transparent $purple transparent;
+  animation: backgroundLaunched 1s linear infinite;
+  transition: border 1s ease-out;
+  transition: animation 1s ease-out;
+}
+
+@keyframes backgroundLaunched {
+  0% {
+    border-color: $purple transparent $purple transparent;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    border-color: $red transparent $red transparent;
+  }
+}
+
+.launchMessage {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-top: 25px;
+  font-size: 32px;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  to {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+}
+
+#launchMessage {
+  animation: flashMessage 500ms linear infinite;
+}
+
+@keyframes flashMessage {
+  0% {
+    color: black;
+  }
+  100% {
+    color: red;
+  }
+}

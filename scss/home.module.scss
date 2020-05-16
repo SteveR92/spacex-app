@@ -1,0 +1,39 @@
+.homeContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.homeContents {
+  display: flex;
+  align-self: start;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 30%;
+  padding-top: 15%;
+}
+
+.homeHeader {
+  font-size: 3rem;
+  color: rgb(115, 201, 238);
+  padding-bottom: 5%;
+}
+
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.homeMessage {
+  padding-top: 5%;
+  text-align: justify;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 1.5em;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
