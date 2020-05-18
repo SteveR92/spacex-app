@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 console.log(useRouter);
 const LaunchSequence = (props) => {
   const [launched, setLaunched] = useState(false);
-  let [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0);
   const launchArray = ["Launch", 5, 4, 3, 2, 1, "Lift Off!"];
 
   const launchSequenceFn = () => {

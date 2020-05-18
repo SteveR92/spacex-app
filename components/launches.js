@@ -8,7 +8,7 @@ export const Launches = (props) => {
             as={`/launches/${launch.flight_number}`}
             href={"/launches/[flight_number]"}
           >
-            <div className={launchCard}>
+            <div>
               {launch.mission_name}
               <br />
               {launch.launch_year}

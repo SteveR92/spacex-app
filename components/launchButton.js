@@ -1,7 +1,10 @@
+import { useDispatch } from "react-redux";
+import { fetchMissions } from "../store/actions/postAction";
+
 import Link from "next/link";
 import styles from "../scss/launchButton.module.scss";
 import LaunchSequence from "./launchSequence";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 const Button = ({ href }) => {
@@ -16,6 +19,12 @@ const Button = ({ href }) => {
       router.push("/launch_news");
     }, 6500);
   };
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchMissions());
+  }, []);
+
   return (
     <div className={styles.buttonContainer}>
       <div
