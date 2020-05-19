@@ -1,16 +1,29 @@
 import axios from "axios";
+import styles from "../../scss/flightnumber.module.scss";
+import MissionName from "../../components/flight_info/MissionName";
+import Rocket from "../../components/flight_info/Rocket";
+import SecondStage from "../../components/flight_info/SecondStage";
+import Orbit from "../../components/flight_info/Orbit";
+import Ships from "../../components/flight_info/Ships";
+import LaunchSite from "../../components/flight_info/LaunchSite";
+import LaunchSuccess from "../../components/flight_info/LaunchSuccess";
+import Details from "../../components/flight_info/Details";
+import FirstStage from "../../components/flight_info/FirstStage";
 export default ({ mission }) => {
-  console.log(mission.rocket.second_stage.payloads);
   let secondStage = mission.rocket.second_stage.payloads[0];
   return (
-    <div>
+    <div className={styles.infoGrid}>
       <h2>LAUNCH!</h2>
       <div>
-        <p>{mission.flight_number}</p>
-        <p>{mission.mission_name}</p>
-        <p>{secondStage.payload_type}</p>
-        <p>{secondStage.orbit_params.reference_system} Orbit</p>
-        <p>{secondStage.nationality}</p>
+        <MissionName props={mission} />
+        <Rocket props={mission} />
+        <FirstStage props={mission} />
+        <SecondStage props={mission} />
+        <Orbit props={mission} />
+        <Ships props={mission} />
+        <LaunchSite props={mission} />
+        <LaunchSuccess props={mission} />
+        <Details props={mission} />
       </div>
     </div>
   );
