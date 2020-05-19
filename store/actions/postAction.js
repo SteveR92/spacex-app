@@ -5,6 +5,6 @@ export const fetchMissions = () => async (dispatch) => {
   const launches = await axios.get("https://api.spacexdata.com/v3/launches");
   dispatch({
     type: types.GET_POSTS,
-    payload: launches.data,
+    payload: launches.data.reverse(),
   });
 };
