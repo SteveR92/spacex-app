@@ -9,22 +9,22 @@ import LaunchSite from "../../components/flight_info/LaunchSite";
 import LaunchSuccess from "../../components/flight_info/LaunchSuccess";
 import Details from "../../components/flight_info/Details";
 import FirstStage from "../../components/flight_info/FirstStage";
+import RocketImages from "../../components/flight_info/RocketImages";
 export default ({ mission }) => {
-  let secondStage = mission.rocket.second_stage.payloads[0];
   return (
     <div className={styles.infoGrid}>
       <h2>LAUNCH!</h2>
-      <div>
-        <MissionName props={mission} />
-        <Rocket props={mission} />
-        <FirstStage props={mission} />
-        <SecondStage props={mission} />
-        <Orbit props={mission} />
-        <Ships props={mission} />
-        <LaunchSite props={mission} />
-        <LaunchSuccess props={mission} />
-        <Details props={mission} />
-      </div>
+
+      <MissionName props={mission} />
+      <Rocket props={mission} />
+      <FirstStage props={mission} />
+      <SecondStage props={mission} />
+      <Orbit props={mission} />
+      <Ships props={mission} />
+      <LaunchSite props={mission} />
+      <LaunchSuccess props={mission} />
+      <Details props={mission} />
+      <RocketImages props={mission} />
     </div>
   );
 };

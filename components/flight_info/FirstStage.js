@@ -1,3 +1,4 @@
+import styles from "../../scss/flightinfo.module.scss";
 const getValue = (value) => {
   if (typeof value == "string") {
     return value;
@@ -14,14 +15,13 @@ const getValue = (value) => {
 const FirstStage = ({ props }) => {
   let firstStage = props.rocket.first_stage.cores;
   return (
-    <div>
+    <div className={styles.infoCard}>
       <h2>First Stage</h2>
       {firstStage.map((item, index) => {
-        console.log(item);
         return (
-          <ul key={index}>
+          <ul>
             {Object.keys(item).map((key) => (
-              <li>
+              <li key={index}>
                 {key}: {getValue(item[key])}
               </li>
             ))}

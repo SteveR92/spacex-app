@@ -1,7 +1,9 @@
+import styles from "../../scss/flightinfo.module.scss";
+
 const Details = ({ props }) => {
   console.log(props);
   return (
-    <div>
+    <div className={styles.infoCard}>
       <h2>Details</h2>
       <p>{props.details}</p>
     </div>

@@ -1,0 +1,32 @@
+.card {
+  border: 3px #f3f3f3 solid;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s linear;
+  cursor: pointer;
+  background-color: #f3f3f3;
+  padding: 10px;
+  max-width: 400px;
+  text-align: left;
+  margin: 0 auto;
+
+  img {
+    width: 100%;
+  }
+}
+
+.cardsSlider {
+  height: 400px;
+  overflow-y: scroll;
+  padding: 4%;
+}
+
+.lightboxImage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightboxImage img {
+  width: 900px;
+}

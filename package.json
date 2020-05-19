@@ -11,6 +11,7 @@
     "@zeit/next-sass": "^1.0.1",
     "axios": "^0.19.2",
     "eslint-plugin-import": "^2.20.2",
+    "lightbox-react": "^0.3.7",
     "next": "^9.4.0",
     "next-compose-plugins": "^2.2.0",
     "next-images": "^1.4.0",
@@ -18,11 +19,15 @@
     "node-sass": "^4.14.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-modal": "^3.11.2",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.3.0",
     "redux-wrapper": "0.0.1"
+  },
+  "devDependencies": {
+    "fslightbox-react": "^1.4.9"
   }
 }
