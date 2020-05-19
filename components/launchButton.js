@@ -12,35 +12,38 @@ const Button = ({ href }) => {
   const [launch, isLaunching] = useState(false);
   const [launchStyle, setLaunchStyle] = useState(false);
 
-  const goForLaunch = () => {
-    isLaunching(true);
-    setLaunchStyle(true);
-    setInterval(() => {
-      router.push("/launch_news");
-    }, 6500);
-  };
+  // const goForLaunch = () => {
+  //   isLaunching(true);
+  //   setLaunchStyle(true);
+  //   setInterval(() => {
+  //     router.push("/launch_news");
+  //   }, 6500);
+  // };
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchMissions());
-  }, []);
+  // useEffect(() => {
+  //   dispatch(fetchMissions());
+  // }, []);
 
   return (
-    <div className={styles.buttonContainer}>
-      <div
-        className={styles.buttonBackground}
-        id={launchStyle ? `${styles.launchedBackground}` : "no-launch"}
-      ></div>
+    // <div className={styles.buttonContainer}>
+    //   <div
+    //     className={styles.buttonBackground}
+    //     id={launchStyle ? `${styles.launchedBackground}` : "no-launch"}
+    //   ></div>
 
-      <div
-        href={href}
-        className={styles.launchButton}
-        onClick={goForLaunch}
-        id={launchStyle ? `${styles.launched}` : "no-launch"}
-      ></div>
-      <LaunchSequence props={launch} />
-    </div>
+    //   <div
+    //     href={href}
+    //     className={styles.launchButton}
+    //     onClick={goForLaunch}
+    //     id={launchStyle ? `${styles.launched}` : "no-launch"}
+    //   ></div>
+    //   {/* <LaunchSequence props={launch} /> */}
+    // </div>
+    <Link href="/launch_news">
+      <button>Launch</button>
+    </Link>
   );
 };
 

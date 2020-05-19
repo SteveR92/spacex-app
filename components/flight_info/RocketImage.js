@@ -32,8 +32,12 @@ const RocketImage = ({ props }) => {
         );
       })}
       <Modal isOpen={isOpen} onRequestClose={() => setIsOpen(false)}>
-        <div className={styles.lightboxImage}>
-          <img src={imageArr[imageKey]} alt="rocket" id={styles.rocketImage} />
+        <div className={styles.lightboxImageWrapper}>
+          <img
+            src={imageArr[imageKey]}
+            alt="rocket"
+            id={styles.lightboxImage}
+          />
         </div>
       </Modal>
     </div>

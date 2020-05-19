@@ -20,13 +20,14 @@
   padding: 4%;
 }
 
-.lightboxImage {
+.lightboxImageWrapper {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.lightboxImage img {
-  width: 900px;
+#lightboxImage {
+  max-width: 900px;
+  max-height: 600px;
 }
