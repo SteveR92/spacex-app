@@ -7,14 +7,14 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
   }
 
   return (
-    <div>
+    <div className={styles.list}>
       <nav>
         <ul className={styles.ul}>
           {pageNumbers.map((number) => (
             <li
               key={number}
-              onClick={() => paginate(number)}
               className={styles.li}
+              onClick={() => paginate(number)}
             >
               <a className="page-link">{number}</a>
             </li>
