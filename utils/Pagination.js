@@ -1,4 +1,4 @@
-import styles from "../scss/paginate.module.scss";
+import styles from "../scss/utils/paginate.module.scss";
 const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
   const pageNumbers = [];
 

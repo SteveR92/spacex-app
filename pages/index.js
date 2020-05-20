@@ -1,5 +1,6 @@
-import Button from "../components/launchButton";
-import styles from "../scss/home.module.scss";
+import PastLaunches from "../components/buttons/pastLaunchesButton";
+import UpcomingLaunches from "../components/buttons/upcomingLauncesButton";
+import styles from "../scss/homepage/home.module.scss";
 import logo from "../images/spacex.png";
 export default function Home() {
   return (
@@ -17,7 +18,8 @@ export default function Home() {
       <div className={styles.homeContents}>
         <h2 className={styles.homeHeader}>SpaceX News</h2>
         <div className={styles.buttonContainer}>
-          <Button />
+          <UpcomingLaunches />
+          <PastLaunches />
         </div>
         <div className={styles.homeMessage}>
           <p>

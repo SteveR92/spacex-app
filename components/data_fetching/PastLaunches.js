@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import styles from "../scss/launches.module.scss";
+import styles from "../../scss/flights/launches.module.scss";
 export const Launches = (props) => {
   const [propsData, setPropsData] = useState(() => props);
 

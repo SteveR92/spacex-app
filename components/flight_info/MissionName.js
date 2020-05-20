@@ -1,4 +1,4 @@
-import styles from "../../scss/flightinfo.module.scss";
+import styles from "../../scss/flights/flightinfo.module.scss";
 const MissionName = ({ props }) => {
   let unixDate = props.launch_date_unix;
   const dateObj = new Date(unixDate * 1000);

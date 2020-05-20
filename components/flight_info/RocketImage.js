@@ -1,7 +1,6 @@
-import styles from "../../scss/rocketImage.module.scss";
+import styles from "../../scss/flights/rocketImage.module.scss";
 import Modal from "react-modal";
 import React, { useState } from "react";
-import Lightbox from "../Lightbox";
 
 const RocketImage = ({ props }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,6 +31,9 @@ const RocketImage = ({ props }) => {
         );
       })}
       <Modal isOpen={isOpen} onRequestClose={() => setIsOpen(false)}>
+        <div className={styles.buttonContainer}>
+          <button onClick={() => setIsOpen(false)}>X</button>
+        </div>
         <div className={styles.lightboxImageWrapper}>
           <img
             src={imageArr[imageKey]}

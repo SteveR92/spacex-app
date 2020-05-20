@@ -1,4 +1,4 @@
-import styles from "../../scss/flightinfo.module.scss";
+import styles from "../../scss/flights/flightinfo.module.scss";
 const getValue = (value) => {
   if (typeof value == "string") {
     return value;

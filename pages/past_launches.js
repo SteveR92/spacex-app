@@ -1,9 +1,9 @@
 import { fetchMissions } from "../store/actions/postAction";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Launches } from "../components/launches";
-import Pagination from "../components/Pagination";
-import styles from "../scss/launches.module.scss";
+import { Launches } from "../components/data_fetching/PastLaunches";
+import Pagination from "../utils/Pagination";
+import styles from "../scss/flights/launches.module.scss";
 export default function Launch_News() {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(50);

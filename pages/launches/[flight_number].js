@@ -1,5 +1,5 @@
 import axios from "axios";
-import styles from "../../scss/flightnumber.module.scss";
+import styles from "../../scss/flights/flightnumber.module.scss";
 import MissionName from "../../components/flight_info/MissionName";
 import Rocket from "../../components/flight_info/Rocket";
 import SecondStage from "../../components/flight_info/SecondStage";

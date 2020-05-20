@@ -1,4 +1,4 @@
-import styles from "../../scss/flightinfo.module.scss";
+import styles from "../../scss/flights/flightinfo.module.scss";
 const Orbit = ({ props }) => {
   let orbit = props.rocket.second_stage.payloads[0];
   return (
