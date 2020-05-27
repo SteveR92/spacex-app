@@ -6,7 +6,6 @@ const RocketImages = ({ props }) => {
   return (
     <div className={imageStyles.imageContainer}>
       <div className={styles.photoCard}>
-        <h2>Images</h2>
         <div className={imageStyles.cardsSlider}>
           <RocketImage props={images} />
         </div>

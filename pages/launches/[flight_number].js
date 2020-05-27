@@ -13,18 +13,24 @@ import RocketImages from "../../components/flight_info/RocketImages";
 export default ({ mission }) => {
   return (
     <div className={styles.infoGrid}>
-      <h2>LAUNCH!</h2>
+      <div className={styles.topGroup}>
+        <MissionName props={mission} />
+        <Rocket props={mission} />
+        <Ships props={mission} />
+        {/* <LaunchSuccess props={mission} /> */}
+      </div>
 
-      <MissionName props={mission} />
-      <Rocket props={mission} />
-      <FirstStage props={mission} />
-      <SecondStage props={mission} />
-      <Orbit props={mission} />
-      <Ships props={mission} />
-      <LaunchSite props={mission} />
-      <LaunchSuccess props={mission} />
-      <Details props={mission} />
-      <RocketImages props={mission} />
+      <div className={styles.middleGroup}>
+        <RocketImages props={mission} />
+        <LaunchSite props={mission} />
+        <Details props={mission} />
+      </div>
+
+      <div className={styles.bottomGroup}>
+        <FirstStage props={mission} />
+        <SecondStage props={mission} />
+        <Orbit props={mission} />
+      </div>
     </div>
   );
 };

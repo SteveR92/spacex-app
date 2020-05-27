@@ -5,3 +5,12 @@
   width: 400px;
   margin: 2%;
 }
+
+.infoHeader {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 20%;
+  }
+}

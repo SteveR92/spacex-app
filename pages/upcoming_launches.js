@@ -3,13 +3,20 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Launches } from "../components/data_fetching/UpcomingLaunches";
 import Pagination from "../utils/Pagination";
+import Dropdown from "../utils/Dropdown";
+
 import styles from "../scss/flights/launches.module.scss";
 export default function Launch_News() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(200);
-  const { posts } = useSelector((state) => state.post);
   const dispatch = useDispatch();
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage, setPostsPerPage] = useState(10);
 
+  //Fetching posts and filtering out past launches
+  let { posts } = useSelector((state) => state.post);
+  posts = posts.filter((post) => post.upcoming);
+  let launchData = posts.reverse();
+
+  //Pagination
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
@@ -18,9 +25,12 @@ export default function Launch_News() {
   useEffect(() => {
     dispatch(fetchMissions());
   }, []);
+
   return (
     <div className={styles.launchContainer}>
       <h2>The Latest Launch News</h2>
+
+      <Dropdown setPostsPerPage={setPostsPerPage} />
       <Launches data={currentPosts} key={posts.flight_number} />
       <Pagination
         postsPerPage={postsPerPage}

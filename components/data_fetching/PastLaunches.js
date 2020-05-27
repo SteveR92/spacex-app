@@ -1,30 +1,46 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import styles from "../../scss/flights/launches.module.scss";
-export const Launches = (props) => {
-  const [propsData, setPropsData] = useState(() => props);
 
-  useEffect(() => {
-    localStorage.setItem("props", JSON.stringify(propsData));
-  }, []);
+const getValue = (value) => {
+  if (typeof value == "string") {
+    return value.slice(0, 10);
+  }
+  if (typeof value == "boolean") {
+    if (!value) {
+      return "No";
+    }
+    if (value) {
+      return "Yes";
+    }
+  }
+};
+
+export const Launches = (props) => {
   return (
     <div>
-      {props.data.map((launch) => {
-        if (!launch.upcoming) {
-          return (
-            <Link
-              as={`/launches/${launch.flight_number}`}
-              href={"/launches/[flight_number]"}
-            >
-              <div className={styles.flightCard}>
-                {launch.mission_name}
-                <br />
-                {launch.launch_year}
-              </div>
-            </Link>
-          );
-        }
-      })}
+      <table className={styles.table}>
+        <th>No.</th>
+        <th>Flight</th>
+        <th>Launch</th>
+        <th>Successful?</th>
+        {props.data.map((launch) => {
+          if (!launch.upcoming) {
+            return (
+              <Link
+                as={`/launches/${launch.flight_number}`}
+                href={"/launches/[flight_number]"}
+              >
+                <tr className={styles.tr}>
+                  <td>{launch.flight_number}</td>
+                  <td>{launch.mission_name}</td>
+                  <td>{getValue(launch.launch_date_local)}</td>
+                  <td>{getValue(launch.launch_success)}</td>
+                </tr>
+              </Link>
+            );
+          }
+        })}
+      </table>
     </div>
   );
 };
