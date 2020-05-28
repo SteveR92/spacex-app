@@ -11,6 +11,7 @@ import Details from "../../components/flight_info/Details";
 import FirstStage from "../../components/flight_info/FirstStage";
 import RocketImages from "../../components/flight_info/RocketImages";
 export default ({ mission }) => {
+  console.log({ mission });
   return (
     <div className={styles.infoGrid}>
       <div className={styles.topGroup}>

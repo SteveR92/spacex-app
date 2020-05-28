@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Launches } from "../components/data_fetching/PastLaunches";
 import Pagination from "../utils/Pagination";
 import Dropdown from "../utils/Dropdown";
+import Layout from "../components/layout/Layout";
 import styles from "../scss/flights/launches.module.scss";
 
 export default function Launch_News() {
@@ -26,16 +27,18 @@ export default function Launch_News() {
   }, []);
 
   return (
-    <div className={styles.launchContainer}>
-      <h2>The Latest Launch News</h2>
+    <Layout>
+      <div className={styles.launchContainer}>
+        <h2>The Latest Launch News</h2>
 
-      <Dropdown setPostsPerPage={setPostsPerPage} />
-      <Launches data={currentPosts} key={posts.flight_number} />
-      <Pagination
-        postsPerPage={postsPerPage}
-        totalPosts={posts.length}
-        paginate={paginate}
-      />
-    </div>
+        <Dropdown setPostsPerPage={setPostsPerPage} />
+        <Launches data={currentPosts} key={posts.flight_number} />
+        <Pagination
+          postsPerPage={postsPerPage}
+          totalPosts={posts.length}
+          paginate={paginate}
+        />
+      </div>
+    </Layout>
   );
 }
