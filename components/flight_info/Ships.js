@@ -23,7 +23,7 @@ const Ships = ({ props }) => {
         <img src={ship} alt="icon" />
         <h2>Ships</h2>
       </div>
-      <ul>
+      <ul className={styles.shipsList}>
         {props.ships.map((ship) => {
           return <li>{getValue(ship)}</li>;
         })}

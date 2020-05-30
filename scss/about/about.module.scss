@@ -1,0 +1,37 @@
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5%;
+  width: 60%;
+  margin: auto;
+
+  .astroDiv {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    position: absolute;
+    bottom: 0;
+    animation: mover 1s infinite alternate;
+  }
+
+  @keyframes mover {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+
+  img {
+    width: 20%;
+  }
+
+  p,
+  h2 {
+    font-size: 2em;
+    line-height: 50px;
+    letter-spacing: 2px;
+  }
+}

@@ -1,21 +1,30 @@
 import styles from "../../scss/layout/nav.module.scss";
+import Link from "../../utils/Activelink";
 
-const Nav = () => {
+const Nav = ({ href, children }) => {
   return (
     <div className={styles.nav}>
       <ul>
-        <a href="/about">
-          <li>About</li>
-        </a>
-        <a href="/past_launches">
-          <li>Past Launches</li>
-        </a>
-        <a href="/upcoming_launches">
-          <li>Upcoming Launches</li>
-        </a>
-        <a href="/">
-          <li>Home</li>
-        </a>
+        <li>
+          <Link activeClassName={styles.active} href="/about">
+            <a>About</a>
+          </Link>
+        </li>
+        <li>
+          <Link activeClassName={styles.active} href="/past_launches">
+            <a>Past Launches</a>
+          </Link>
+        </li>
+        <li>
+          <Link activeClassName={styles.active} href="/upcoming_launches">
+            <a>Upcoming Launches</a>
+          </Link>
+        </li>
+        <li>
+          <Link activeClassName={styles.active} href="/">
+            <a>Home</a>
+          </Link>
+        </li>
       </ul>
     </div>
   );

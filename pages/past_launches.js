@@ -7,6 +7,7 @@ import Dropdown from "../utils/Dropdown";
 import Layout from "../components/layout/Layout";
 import styles from "../scss/flights/launches.module.scss";
 import astronaut from "../images/astronaut.png";
+import store from "../store/store";
 
 export default function Launch_News() {
   const dispatch = useDispatch();
@@ -27,22 +28,32 @@ export default function Launch_News() {
     dispatch(fetchMissions());
   }, []);
 
-  return (
-    <Layout>
-      <div className={styles.launchContainer}>
-        <div>
-          <Dropdown setPostsPerPage={setPostsPerPage} />
-          <Launches data={currentPosts} key={posts.flight_number} />
+  if (store.getState().post.loading) {
+    return (
+      <Layout>
+        <div className={styles.launchContainer}>
+          <p>launching...</p>
         </div>
-        <Pagination
-          postsPerPage={postsPerPage}
-          totalPosts={posts.length}
-          paginate={paginate}
-        />
-        <div className={styles.astroDiv}>
-          <img src={astronaut} alt="astronaut" />
+      </Layout>
+    );
+  } else {
+    return (
+      <Layout>
+        <div className={styles.launchContainer}>
+          <div>
+            <Dropdown setPostsPerPage={setPostsPerPage} />
+            <Launches data={currentPosts} key={posts.flight_number} />
+          </div>
+          <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={posts.length}
+            paginate={paginate}
+          />
+          <div className={styles.astroDiv}>
+            <img src={astronaut} alt="astronaut" />
+          </div>
         </div>
-      </div>
-    </Layout>
-  );
+      </Layout>
+    );
+  }
 }

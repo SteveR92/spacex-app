@@ -28,9 +28,10 @@ export default function Home() {
           </div>
           <div className={styles.homeMessage}>
             <p>
-              Find out the latest from Space X's launches and other words that I
-              need to write here will go here but for now I am just filling
-              space because I can't be bothered to get Lorem Ipsum.
+              Float through through Space X's past launches, gather all the
+              intel and enjoy some stunning imagery. You can also be in the know
+              about all upcoming launches with data supplied when made
+              available.
             </p>
           </div>
         </div>

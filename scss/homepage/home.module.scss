@@ -21,8 +21,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  width: 110%;
+  width: 100%;
+  padding: 2%;
 
   .pipeline {
     display: inline-block;
@@ -61,4 +61,25 @@
   color: rgb(242, 243, 249);
   font-weight: 300;
   line-height: 2.4rem;
+}
+
+@media (max-width: 1400px) {
+  .homeContents {
+    margin: auto;
+    margin-top: 20%;
+
+    p {
+      display: none;
+    }
+  }
+
+  .homeContentsHeader {
+    h2 {
+      font-size: 2rem;
+    }
+
+    .pipeline {
+      height: 30px;
+    }
+  }
 }

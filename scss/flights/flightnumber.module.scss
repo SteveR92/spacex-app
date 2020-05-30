@@ -12,8 +12,18 @@
   display: flex;
   justify-content: center;
   width: 90%;
+  flex-direction: row;
 }
 
 .bottomGroup {
   height: 380px;
+}
+
+@media (max-width: 1000px) {
+  .topGroup,
+  .middleGroup,
+  .bottomGroup {
+    flex-direction: column;
+    align-items: center;
+  }
 }

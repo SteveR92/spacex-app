@@ -1,6 +1,5 @@
 import Link from "next/link";
 import styles from "../../scss/flights/launches.module.scss";
-
 const getValue = (value) => {
   if (typeof value == "string") {
     return value.slice(0, 10);

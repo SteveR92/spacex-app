@@ -3,7 +3,7 @@ import * as types from "../types";
 const initialState = {
   posts: [],
   post: {},
-  loading: false,
+  loading: true,
   error: null,
 };
 

@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding-bottom: 15px;
+  padding-bottom: 25px;
 
   ul {
     padding-right: 14px;
@@ -15,11 +15,14 @@
   li {
     padding: 10px;
     margin-left: 10px;
-    color: rgb(129, 76, 253);
     cursor: pointer;
     float: right;
     font-size: 1.2em;
     letter-spacing: 2px;
     text-transform: uppercase;
   }
+}
+
+.active {
+  color: rgb(188, 160, 253);
 }

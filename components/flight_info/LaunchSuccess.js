@@ -1,12 +1,17 @@
 import styles from "../../scss/flights/flightinfo.module.scss";
 const getValue = (value) => {
   if (typeof value == "boolean") {
-    if (value) return "Launch Successful";
-    if (!value) return "Launch Failed";
+    if (value) return "Successful";
+    if (!value) return "Failed";
   }
 };
 const LaunchSuccess = ({ props }) => {
-  return <p>{getValue(props.launch_success)}</p>;
+  return (
+    <p>
+      <span id={styles.key}>Launch: </span>
+      {getValue(props.launch_success)}
+    </p>
+  );
 };
 
 export default LaunchSuccess;
