@@ -9,30 +9,32 @@ import LaunchSite from "../../components/flight_info/LaunchSite";
 import Details from "../../components/flight_info/Details";
 import FirstStage from "../../components/flight_info/FirstStage";
 import RocketImages from "../../components/flight_info/RocketImages";
-
+import Layout from "../../components/layout/Layout";
 export default ({ mission }) => {
   console.log({ mission });
   return (
-    <div className={styles.infoGrid}>
-      <div className={styles.topGroup}>
-        <MissionName props={mission} />
-        <Rocket props={mission} />
-        <Ships props={mission} />
-        {/* <LaunchSuccess props={mission} /> */}
-      </div>
+    <Layout>
+      <div className={styles.infoGrid}>
+        <div className={styles.topGroup}>
+          <MissionName props={mission} />
+          <Rocket props={mission} />
+          <Ships props={mission} />
+          {/* <LaunchSuccess props={mission} /> */}
+        </div>
 
-      <div className={styles.middleGroup}>
-        <RocketImages props={mission} />
-        <LaunchSite props={mission} />
-        <Details props={mission} />
-      </div>
+        <div className={styles.middleGroup}>
+          <LaunchSite props={mission} />
+          <Details props={mission} />
+          <FirstStage props={mission} />
+        </div>
 
-      <div className={styles.bottomGroup}>
-        <FirstStage props={mission} />
-        <SecondStage props={mission} />
-        <Orbit props={mission} />
+        <div className={styles.bottomGroup}>
+          <SecondStage props={mission} />
+          <Orbit props={mission} />
+          <RocketImages props={mission} />
+        </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 

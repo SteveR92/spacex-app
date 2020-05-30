@@ -1,5 +1,5 @@
 import styles from "../../scss/flights/flightinfo.module.scss";
-import rocket_3 from "../../images/icons/rocket_2.png";
+import rocket_3 from "../../images/icons/rocket_1_w.png";
 import LaunchSuccess from "./LaunchSuccess";
 const getValue = (value) => {
   if (typeof value == "string") {

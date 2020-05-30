@@ -9,7 +9,7 @@ const Orbit = ({ props }) => {
         <h2>Orbit</h2>
       </div>
       <p>
-        <span id={styles.key}>Orbit: </span>
+        <span id={styles.key}> Orbit: </span>
         {orbit.orbit_params.reference_system}
       </p>
       <p>

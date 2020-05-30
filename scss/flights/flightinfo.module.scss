@@ -1,14 +1,15 @@
 .infoCard {
   background: linear-gradient(
     to right,
-    #000000,
-    #434343
+    #232526,
+    #414345
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   padding: 10px;
   border-radius: 5px;
   width: 400px;
-  margin: 2%;
+  margin: 1.5%;
+  border-bottom: 4px solid #58afd1;
 }
 
 .infoHeader {
@@ -23,4 +24,6 @@
 #key {
   font-weight: 700;
   color: rgb(129, 76, 253);
+  font-size: 1.1em;
+  letter-spacing: 1px;
 }

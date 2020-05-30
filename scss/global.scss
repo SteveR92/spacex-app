@@ -2,23 +2,29 @@ body {
   scrollbar-color: white white;
   padding: 0;
   margin: 0;
-  background: rgb(30, 30, 30);
+  background: rgb(39, 39, 39);
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 p,
 li {
   text-align: justify;
   color: white;
+  font-size: 1.1em;
+  letter-spacing: 1px;
 }
 
 h2 {
   color: #58afd1;
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }

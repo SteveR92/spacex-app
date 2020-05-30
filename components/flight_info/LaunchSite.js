@@ -12,7 +12,7 @@ const LaunchSite = ({ props }) => {
         {props.launch_site.site_name}
       </p>
       <p>
-        <span id={styles.key}>Site Name: </span>
+        <span id={styles.key}>Site: </span>
         {props.launch_site.site_name_long}
       </p>
     </div>
