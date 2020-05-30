@@ -8,8 +8,7 @@ export default function Home() {
       <div
         className={styles.homeContainer}
         style={{
-          backgroundImage:
-            "url(" + `${require("../images/background-1.jpg")}` + ")",
+          backgroundImage: "url(" + `${require("../images/BG-BNW.png")}` + ")",
           width: "100%",
           height: "100vh",
           backgroundRepeat: "no-repeat",
@@ -17,7 +16,12 @@ export default function Home() {
         }}
       >
         <div className={styles.homeContents}>
-          <h2 className={styles.homeHeader}>SpaceX News</h2>
+          <div className={styles.homeContentsHeader}>
+            <h2 className={styles.homeHeader}>
+              Space<span>X</span> <div className={styles.pipeline}></div>{" "}
+              <span>News</span>
+            </h2>
+          </div>
           <div className={styles.buttonContainer}>
             <UpcomingLaunches />
             <PastLaunches />

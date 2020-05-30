@@ -7,8 +7,14 @@ const LaunchSite = ({ props }) => {
         <img src={LaunchSiteImg} alt="icon" />
         <h2>Launch Site</h2>
       </div>
-      <h3>{props.launch_site.site_name}</h3>
-      <h3>{props.launch_site.site_name_long}</h3>
+      <p>
+        <span id={styles.key}>Launch Site: </span>
+        {props.launch_site.site_name}
+      </p>
+      <p>
+        <span id={styles.key}>Site Name: </span>
+        {props.launch_site.site_name_long}
+      </p>
     </div>
   );
 };

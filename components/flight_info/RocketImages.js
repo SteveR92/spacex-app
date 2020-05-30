@@ -5,10 +5,8 @@ const RocketImages = ({ props }) => {
   let images = props.links.flickr_images;
   return (
     <div className={imageStyles.imageContainer}>
-      <div className={styles.photoCard}>
-        <div className={imageStyles.cardsSlider}>
-          <RocketImage props={images} />
-        </div>
+      <div className={imageStyles.cardsSlider} id={imageStyles.cardsSlider}>
+        <RocketImage props={images} />
       </div>
     </div>
   );

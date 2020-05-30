@@ -8,11 +8,24 @@ const SecondStage = ({ props }) => {
         <img src={second_stage} alt="icon" />
         <h2>Second Stage</h2>
       </div>
-      <h3>Nationality: {secondStage.nationality}</h3>
-      <h3>Customers: {secondStage.customers[0]}</h3>
-      <h3>Manufacturer: {secondStage.manufacturer}</h3>
-      <h3>Payload: {secondStage.payload_type}</h3>
-      <h3>Mass: {secondStage.payload_mass_kg} KG</h3>
+      <p>
+        <span id={styles.key}>Nationality: </span> {secondStage.nationality}
+      </p>
+      <p>
+        <span id={styles.key}>Customers: </span> {secondStage.customers[0]}
+      </p>
+      <p>
+        <span id={styles.key}>Manufacturer: </span>
+        {secondStage.manufacturer}
+      </p>
+      <p>
+        <span id={styles.key}>Payload: </span>
+        {secondStage.payload_type}
+      </p>
+      <p>
+        <span id={styles.key}>Payload Mass: </span>
+        {secondStage.payload_mass_kg} KG
+      </p>
     </div>
   );
 };

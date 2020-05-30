@@ -16,6 +16,15 @@ const getValue = (value) => {
   }
 };
 
+const getKeyValue = (value) => {
+  let newVal = value.replace(/_/g, " ");
+  newVal = newVal.split(" ");
+  for (var i = 0, x = newVal.length; i < x; i++) {
+    newVal[i] = newVal[i][0].toUpperCase() + newVal[i].substr(1);
+  }
+  return newVal.join(" ");
+};
+
 const FirstStage = ({ props }) => {
   let firstStage = props.rocket.first_stage.cores;
   return (
@@ -29,7 +38,8 @@ const FirstStage = ({ props }) => {
           <ul>
             {Object.keys(item).map((key) => (
               <li key={index}>
-                {key}: {getValue(item[key])}
+                <span id={styles.key}>{getKeyValue(key)}: </span>
+                {getValue(item[key])}
               </li>
             ))}
           </ul>

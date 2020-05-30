@@ -1,0 +1,24 @@
+body {
+  scrollbar-color: white white;
+  padding: 0;
+  margin: 0;
+  background: rgb(30, 30, 30);
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+p,
+li {
+  text-align: justify;
+  color: white;
+}
+
+h2 {
+  color: #58afd1;
+  font-size: 1.4em;
+  font-weight: 400;
+}

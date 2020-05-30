@@ -6,11 +6,7 @@ const getValue = (value) => {
   }
 };
 const LaunchSuccess = ({ props }) => {
-  return (
-    <div className={styles.infoCard}>
-      <h3>{getValue(props.launch_success)}</h3>
-    </div>
-  );
+  return <p>{getValue(props.launch_success)}</p>;
 };
 
 export default LaunchSuccess;

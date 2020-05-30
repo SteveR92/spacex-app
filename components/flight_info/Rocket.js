@@ -18,9 +18,20 @@ const Rocket = ({ props }) => {
     <div className={styles.infoCard}>
       <div className={styles.infoHeader}>
         <img src={rocket_3} alt="icon" />
+        <h2>Rocket</h2>
       </div>
-      <h3>{props.rocket.rocket_name}</h3>
-      <LaunchSuccess props={props} />
+      <p>
+        <span id={styles.key}>Flight Number: </span>
+        {props.flight_number}
+      </p>
+      <p>
+        <span id={styles.key}>Rocket: </span>
+        {props.rocket.rocket_name}
+      </p>
+      <p>
+        <span id={styles.key}>Rocket Type: </span>
+        {props.rocket.rocket_type}
+      </p>
     </div>
   );
 };

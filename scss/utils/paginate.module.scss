@@ -4,8 +4,12 @@
 
 .li {
   display: inline;
-  padding: 5px;
-  border: 1px solid blue;
+  padding: 8px;
+  color: white;
   margin: 5px;
   cursor: pointer;
+}
+
+.li:hover {
+  color: rgb(129, 76, 253);
 }

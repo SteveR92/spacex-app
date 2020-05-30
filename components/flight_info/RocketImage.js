@@ -30,7 +30,11 @@ const RocketImage = ({ props }) => {
           </div>
         );
       })}
-      <Modal isOpen={isOpen} onRequestClose={() => setIsOpen(false)}>
+      <Modal
+        className={styles.modal}
+        isOpen={isOpen}
+        onRequestClose={() => setIsOpen(false)}
+      >
         <div className={styles.buttonContainer}>
           <button onClick={() => setIsOpen(false)}>X</button>
         </div>

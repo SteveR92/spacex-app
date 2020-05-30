@@ -19,6 +19,7 @@ export const Launches = (props) => {
   return (
     <div>
       <table className={styles.table}>
+        <th></th>
         <th>No.</th>
         <th>Flight</th>
         <th>Launch</th>
@@ -31,7 +32,18 @@ export const Launches = (props) => {
                 href={"/launches/[flight_number]"}
               >
                 <tr className={styles.tr}>
-                  <td>{launch.flight_number}</td>
+                  <td>
+                    <div className={styles.imageContainer}>
+                      <img
+                        src={launch.links.flickr_images[0]}
+                        alt="rocket image"
+                        className={styles.tableImage}
+                      />
+                    </div>
+                  </td>
+                  <td className={styles.flightNumber}>
+                    {launch.flight_number}
+                  </td>
                   <td>{launch.mission_name}</td>
                   <td>{getValue(launch.launch_date_local)}</td>
                   <td>{getValue(launch.launch_success)}</td>

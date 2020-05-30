@@ -2,6 +2,36 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 5%;
+
+  h2,
+  p {
+    text-transform: uppercase;
+    color: rgb(242, 243, 249);
+    font-size: 1.8rem;
+  }
+
+  .astroDiv {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    position: absolute;
+    bottom: 0;
+    animation: mover 1s infinite alternate;
+  }
+
+  @keyframes mover {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+
+  img {
+    width: 20%;
+  }
 }
 
 .flightCard {
@@ -13,28 +43,53 @@
 }
 
 .table {
-  border-collapse: separate;
+  border-collapse: collapse;
   border-spacing: 10px 5px;
-  border: 1px solid black;
+
   padding: 1%;
   margin: 1%;
+  color: rgb(242, 243, 249);
+  width: 100%;
+  text-align: left;
+
+  th {
+    padding-left: 15px;
+    color: rgb(58, 111, 244);
+  }
 
   tr {
     padding-bottom: 10%;
-    border: 1px solid black;
+
     cursor: pointer;
   }
 
-  tr:nth-of-type(even) {
-    background: rgb(214, 214, 235);
-  }
-
   tr:hover {
-    background: rgb(213, 213, 213);
+    color: rgb(129, 76, 253);
+
+    .imageContainer {
+      overflow: hidden;
+      border-radius: 50%;
+      scrollbar-color: light !important;
+    }
+
+    img {
+      transform: scale(1.2);
+      transition: transform 0.5s ease;
+    }
   }
 
   td {
-    border: 1pt solid black;
     padding: 20px;
+    border-bottom: 1px solid white;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+
+  .flightNumber {
+    color: rgb(129, 76, 253);
   }
 }

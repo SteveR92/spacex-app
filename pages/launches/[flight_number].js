@@ -6,10 +6,10 @@ import SecondStage from "../../components/flight_info/SecondStage";
 import Orbit from "../../components/flight_info/Orbit";
 import Ships from "../../components/flight_info/Ships";
 import LaunchSite from "../../components/flight_info/LaunchSite";
-import LaunchSuccess from "../../components/flight_info/LaunchSuccess";
 import Details from "../../components/flight_info/Details";
 import FirstStage from "../../components/flight_info/FirstStage";
 import RocketImages from "../../components/flight_info/RocketImages";
+
 export default ({ mission }) => {
   console.log({ mission });
   return (

@@ -1,5 +1,6 @@
 .cardContainer {
   background: white;
+  scrollbar-color: white white !important;
 }
 
 .card {
@@ -12,6 +13,7 @@
   max-width: 450px;
   text-align: left;
   margin: 0 auto;
+  scrollbar-color: light !important;
 
   img {
     width: 100%;
@@ -24,6 +26,24 @@
   padding: 4%;
 }
 
+.cardsSlider::-webkit-scrollbar {
+  width: 0.5em;
+  border-radius: 100px 100px 100px 100px;
+}
+
+.cardsSlider::-webkit-scrollbar-thumb {
+  background-color: rgb(199, 198, 198);
+}
+
+.modal {
+  background-color: rgb(56, 56, 56);
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+}
+
 .lightboxImageWrapper {
   width: 100%;
   display: flex;
@@ -32,8 +52,9 @@
 }
 
 #lightboxImage {
-  max-width: 900px;
-  max-height: 580px;
+  max-width: 1400px;
+  max-height: 900px;
+
   overflow: hidden;
 }
 
@@ -42,10 +63,11 @@
   text-align: right;
 
   button {
-    background: black;
-    color: white;
+    background: white;
+    color: black;
     border: none;
     padding: 10px;
+    margin: 1%;
     cursor: pointer;
   }
 }

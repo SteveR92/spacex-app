@@ -27,7 +27,9 @@ export const Launches = (props) => {
                 href={"/launches/[flight_number]"}
               >
                 <tr className={styles.tr}>
-                  <td>{launch.flight_number}</td>
+                  <td className={styles.flightNumber}>
+                    {launch.flight_number}
+                  </td>
                   <td>{launch.mission_name}</td>
                   <td>{getValue(launch.launch_date_local)}</td>
                 </tr>
