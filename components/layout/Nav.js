@@ -1,5 +1,5 @@
 import styles from "../../scss/layout/nav.module.scss";
-import Link from "../../utils/Activelink";
+import Link from "../../utils/ActiveLink";
 
 const Nav = ({ href, children }) => {
   return (

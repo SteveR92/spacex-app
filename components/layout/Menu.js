@@ -7,7 +7,6 @@ import {
   useComponentVisible,
 } from "react";
 import styles from "../../scss/layout/menu.module.scss";
-import Link from "../../utils/Activelink";
 
 function Nav() {
   const [condition, setCondition] = useState(false);
@@ -50,21 +49,21 @@ function Nav() {
                 condition ? styles.tagpopout_toggled : styles.tagpopout
               }
             >
-              <Link activeClassName={styles.active} href="/">
-                <a className={styles.link}>Home</a>
-              </Link>
+              <a href="/" className={styles.link}>
+                Home
+              </a>
 
-              <Link activeClassName={styles.active} href="/upcoming_launches">
-                <a className={styles.link}>Upcoming Launches</a>
-              </Link>
+              <a href="/upcoming_launches" className={styles.link}>
+                Upcoming Launches
+              </a>
 
-              <Link activeClassName={styles.active} href="/past_launches">
-                <a className={styles.link}>Past Launches</a>
-              </Link>
+              <a href="/past_launches" className={styles.link}>
+                Past Launches
+              </a>
 
-              <Link activeClassName={styles.active} href="/about">
-                <a className={styles.link}>About</a>
-              </Link>
+              <a href="/about" className={styles.link}>
+                About
+              </a>
             </div>
           </div>
 
