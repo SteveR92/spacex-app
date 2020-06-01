@@ -35,7 +35,7 @@ const FirstStage = ({ props }) => {
       </div>
       {firstStage.map((item, index) => {
         return (
-          <ul>
+          <ul className={styles.first_stage_ul}>
             {Object.keys(item).map((key) => (
               <li key={index}>
                 <span id={styles.key}>{getKeyValue(key)}: </span>
