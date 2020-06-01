@@ -40,7 +40,9 @@ export default function Launch_News() {
       <Layout>
         <div className={styles.launchContainer}>
           <div>
-            <Dropdown setPostsPerPage={setPostsPerPage} />
+            <div className={styles.dropdown}>
+              <Dropdown setPostsPerPage={setPostsPerPage} />
+            </div>
             <Launches data={currentPosts} key={posts.flight_number} />
           </div>
           <Pagination

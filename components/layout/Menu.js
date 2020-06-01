@@ -37,9 +37,9 @@ function Nav() {
   };
   const { ref, isComponentVisible } = useComponentVisible(true);
 
-  const body = document.body;
+  //   const body = document.body;
 
-  body.className = condition ? "menu-open" : "menu-closed";
+  //   body.className = condition ? "menu-open" : "menu-closed";
   return (
     <div id={condition ? styles.menuToggled : styles.not_toggled}>
       <div className={styles.menu} ref={ref}>

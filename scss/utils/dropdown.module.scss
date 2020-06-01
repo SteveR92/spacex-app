@@ -1,9 +1,16 @@
 .dropdownContainer {
   select {
-    font-size: 1.3rem;
+    font-size: 1rem;
     background: none;
     color: white;
     border: none;
-    margin-left: 60px;
+  }
+}
+
+@media (max-width: 800px) {
+  .dropdownContainer {
+    select {
+      margin-left: 10%;
+    }
   }
 }
