@@ -18,6 +18,7 @@ export default function Launch_News() {
   let { posts } = useSelector((state) => state.post);
   posts = posts.filter((post) => !post.upcoming);
 
+  console.log(posts.flight_number);
   //Pagination
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
@@ -50,7 +51,7 @@ export default function Launch_News() {
             paginate={paginate}
           />
           <div className={styles.astroDiv}>
-            <img src={astronaut} alt="astronaut" />
+            <img src={astronaut} alt="astronaut" id={styles.astronaut} />
           </div>
         </div>
       </Layout>

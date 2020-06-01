@@ -9,7 +9,7 @@
   .astroDiv {
     width: 100%;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     position: absolute;
     bottom: 0;
     animation: mover 1s infinite alternate;

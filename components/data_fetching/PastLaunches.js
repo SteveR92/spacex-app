@@ -19,11 +19,15 @@ export const Launches = (props) => {
   return (
     <div className={styles.tableContainer}>
       <table className={styles.table}>
-        <th></th>
-        <th>No.</th>
-        <th>Flight</th>
-        <th>Launch</th>
-        <th>Successful?</th>
+        <thead>
+          <tr>
+            <th></th>
+            <th>No.</th>
+            <th>Flight</th>
+            <th>Launch</th>
+            <th>Successful?</th>
+          </tr>
+        </thead>
         {props.data.map((launch) => {
           if (!launch.upcoming) {
             return (

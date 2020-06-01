@@ -13,10 +13,13 @@ export const Launches = (props) => {
   return (
     <div>
       <table className={styles.table}>
-        <th>Flight No.</th>
-        <th>Flight</th>
-        <th>Expected Launch*</th>
-
+        <thead>
+          <tr>
+            <th>Flight No.</th>
+            <th>Flight</th>
+            <th>Expected Launch*</th>
+          </tr>
+        </thead>
         {props.data.map((launch) => {
           console.log(launch);
           if (launch.upcoming) {

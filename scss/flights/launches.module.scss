@@ -27,11 +27,12 @@
   .astroDiv {
     width: 100%;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     position: absolute;
     bottom: 0;
     animation: mover 1s infinite alternate;
     z-index: -1;
+    display: block;
   }
 
   @keyframes mover {
@@ -116,11 +117,11 @@
         margin-left: 25%;
       }
     }
+  }
 
-    .launchContainer {
-      .astroDiv img {
-        display: none;
-      }
+  .launchContainer {
+    .astroDiv {
+      display: none;
     }
   }
 }
