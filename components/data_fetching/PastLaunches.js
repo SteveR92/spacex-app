@@ -17,7 +17,7 @@ const getValue = (value) => {
 
 export const Launches = (props) => {
   return (
-    <div>
+    <div className={styles.tableContainer}>
       <table className={styles.table}>
         <th></th>
         <th>No.</th>

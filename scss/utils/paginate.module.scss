@@ -1,3 +1,7 @@
+.list {
+  padding: 40px;
+}
+
 .ul {
   list-style: none;
 }
@@ -5,11 +9,20 @@
 .li {
   display: inline;
   padding: 8px;
-  color: white;
+  background: white;
   margin: 5px;
   cursor: pointer;
 }
 
 .li:hover {
   color: rgb(129, 76, 253);
+}
+
+@media (max-width: 800px) {
+  .list {
+    width: 90%;
+    margin: auto;
+    overflow-x: scroll;
+    margin: 10px;
+  }
 }

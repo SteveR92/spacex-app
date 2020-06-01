@@ -1,0 +1,20 @@
+@media (min-width: 801px) {
+  .nav {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
+}
+
+@media (max-width: 801px) {
+  .nav {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    padding-bottom: 50px;
+  }
+}

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Nav from "./Nav";
-
+import Menu from "./Menu";
+import styles from "../../scss/layout/layout.module.scss";
 const Layout = ({ children }) => {
   return (
     <div>
@@ -11,7 +12,12 @@ const Layout = ({ children }) => {
         />
       </Head>
       <header>
-        <Nav />
+        <div className={styles.menu}>
+          <Menu />
+        </div>
+        <div className={styles.nav}>
+          <Nav />
+        </div>
       </header>
       <main>{children}</main>
     </div>

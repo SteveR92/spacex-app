@@ -46,10 +46,9 @@
 .table {
   border-collapse: collapse;
   border-spacing: 10px 5px;
-
   padding: 1%;
   color: rgb(242, 243, 249);
-  width: 90%;
+  width: 630px;
   margin: auto;
   text-align: left;
 
@@ -85,21 +84,27 @@
 }
 
 @media (max-width: 800px) {
-  .table {
-    width: 80%;
-    margin: auto;
+  .tableContainer {
+    width: 300px;
+    display: flex;
+    justify-content: center;
 
-    img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      margin-left: 25%;
+    .table {
+      width: 90%;
+      margin: auto;
+
+      img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-left: 25%;
+      }
     }
-  }
 
-  .launchContainer {
-    .astroDiv {
-      display: none;
+    .launchContainer {
+      .astroDiv {
+        display: none;
+      }
     }
   }
 }
