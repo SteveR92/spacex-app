@@ -8,7 +8,10 @@ export default function Home() {
       <div
         className={styles.homeContainer}
         style={{
-          backgroundImage: "url(" + `${require("../images/bg-bnw.png")}` + ")",
+          backgroundImage:
+            "url(" +
+            `${require("../.next/static/images/BG-BNW-8b58edb91f5798641e50d2d31dc6ee75.png")}` +
+            ")",
           width: "100%",
           height: "100vh",
           backgroundRepeat: "no-repeat",
